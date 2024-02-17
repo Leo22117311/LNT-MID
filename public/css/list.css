@@ -1,0 +1,30 @@
+* {
+    font-family: 'poppins';
+}
+
+.kotak {
+    margin: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    word-wrap: break-word;
+}
+
+.kotak .orang {
+    display: flex;
+    justify-content: space-around;
+}
+.kotak img {
+    height: 250px;
+    width: 250px;
+    align-items: center;
+}
+
+.orang div {
+    border: 0.5px solid #8E7AB5;
+    border-radius: 10px;
+    padding: 30px;
+}
