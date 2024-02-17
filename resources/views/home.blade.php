@@ -15,10 +15,9 @@
         </div>
         <div class="right">
             <a href="#">Home</a>
-            <a href="/list">List Karyawan</a>
-            <a href="" class="add">Tambah Karyawan</a>
+            <a href="/list">Employee List</a>
+            <a href="/add-karyawan" class="add">Add Employee</a>
         </div>
-        
     </nav>
     <div class="img">
         <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">

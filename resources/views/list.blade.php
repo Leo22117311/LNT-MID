@@ -16,37 +16,25 @@
         </div>
         <div class="right">
             <a href="/home">Home</a>
-            <a href="#">List Karyawan</a>
-            <a href="" class="add">Tambah Karyawan</a>
+            <a href="#">Employee List</a>
+            <a href="/add-karyawan" class="add">Add Employee</a>
         </div>
     </nav>
+
     <div class="kotak">
-        <div>
-            <h1>Karyawan</h1>
-            <div class="orang">
-                <div>
-                    <img src="{{ ('asset/placeholder.png') }}" alt="">
-                    <h2>Nama: nama</h2>
-                    <h2>Umur: 26</h2>
-                    <h2>Alamat: Jakbar</h2>
-                    <h2>No. Telp: 081111111111</h2>
-                </div>
-                <div>
-                    <img src="{{ ('asset/placeholder.png') }}" alt="">
-                    <h2>Nama: nama</h2>
-                    <h2>Umur: 26</h2>
-                    <h2>Alamat: Jakbar</h2>
-                    <h2>No. Telp: 080000000000</h2>
-                </div>
-                <div>
-                    <img src="{{ ('asset/placeholder.png') }}" alt="">
-                    <h2>Nama: nama</h2>
-                    <h2>Umur: 26</h2>
-                    <h2>Alamat: Jakbar</h2>
-                    <h2>No. Telp: 081111111111</h2>
-                </div>
-                
+        <div class="karyawan">
+            @forelse ($karyawans as $k)
+            <div>
+                <img src="{{ asset('/storage/'.'/'.$k->Photo) }}" alt="{{ $k->Photo }}">
+                <h2>Name: {{ $k->Name }}</h2>
+                <h2>Age: {{ $k->Age }}</h2>
+                <h2>Address: {{ $k->Address }}</h2>
+                <h2>Phone Number: {{ $k->Phone }}</h2>
+                <a href="/edit/.{{ $k->id }}">Edit</a>
             </div>
+            @empty
+                <p>Data is empty.</p>
+            @endforelse
         </div>
     </div>
 </body>

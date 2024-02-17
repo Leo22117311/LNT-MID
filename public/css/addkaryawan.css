@@ -1,0 +1,14 @@
+* {
+    font-family: 'poppins';
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+.box {
+    margin: 180px;
+    background-color: #8e7ab5a2;
+    padding: 20px;
+    border-radius: 10px;
+}
