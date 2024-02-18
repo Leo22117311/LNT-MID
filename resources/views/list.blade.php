@@ -24,13 +24,22 @@
     <div class="kotak">
         <div class="karyawan">
             @forelse ($karyawans as $k)
-            <div>
+            <div class="help">
                 <img src="{{ asset('/storage/'.'/'.$k->Photo) }}" alt="{{ $k->Photo }}">
                 <h2>Name: {{ $k->Name }}</h2>
                 <h2>Age: {{ $k->Age }}</h2>
                 <h2>Address: {{ $k->Address }}</h2>
                 <h2>Phone Number: {{ $k->Phone }}</h2>
-                <a href="/edit/.{{ $k->id }}">Edit</a>
+                <div class="buton">
+                    <a href="/edit/{{ $k->id }}" class = "btn">Edit</a>
+                    <form action="/delete/{{ $k->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button class="btnn" type="submit">
+                            Delete
+                        </button>
+                    </form>
+                </div>
             </div>
             @empty
                 <p>Data is empty.</p>
